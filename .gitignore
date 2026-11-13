@@ -1,0 +1,13 @@
+# Obsidian workspace state & transient files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/indexeddb/
+.trash/
+
+# OS-generated files & temporary buffers
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*~
