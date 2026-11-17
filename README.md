@@ -11,6 +11,8 @@ Workpad/
 ├── Troubleshooting/
 ├── Commands/
 ├── Aliases/
+├── References/
+├── Clippings/
 ├── Templates/
 ├── README.md
 └── .obsidian/
@@ -21,6 +23,8 @@ Workpad/
 - **Troubleshooting/**: Technical problems, error messages, investigation steps, workarounds, and verified solutions. Follow the rule: *one problem per Markdown note*.
 - **Commands/**: Frequently used commands, scripts, and command-line examples (e.g., Git, Docker, Linux, CLI tools).
 - **Aliases/**: Shortcuts and aliases for developer tools (Git, Bash, Zsh, PowerShell) along with configuration and setup instructions.
+- **References/**: General reference notes that don't fit the other categories (docs summaries, concept notes, cheat sheets).
+- **Clippings/**: Web pages and articles saved via a browser clipper, kept as-is with their original frontmatter (`source`, `author`, `published`, `tags: [clippings]`). Exempt from the "no unnecessary metadata/tags" rule below since that metadata comes from the clipper itself.
 - **Templates/**: Standardized templates to ensure consistent, readable note structures across the vault.
 
 ## Note Creation Conventions

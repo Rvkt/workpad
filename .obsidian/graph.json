@@ -41,6 +41,13 @@
         "a": 1,
         "rgb": 15680580
       }
+    },
+    {
+      "query": "path:\"Clippings\"",
+      "color": {
+        "a": 1,
+        "rgb": 6724479
+      }
     }
   ],
   "collapse-display": false,
