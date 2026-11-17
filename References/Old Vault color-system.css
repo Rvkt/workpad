@@ -1,0 +1,505 @@
+/* ==========================================================================
+   Obsidian Second Brain — Canonical Domain Color System & Dashboard Styles
+   ========================================================================== */
+
+:root {
+  /* Canonical Domain Color Palette */
+  --domain-home: #F59E0B;       /* Warm Amber Gold */
+  --domain-daily: #06B6D4;      /* Electric Cyan */
+  --domain-work: #2563EB;       /* Royal Sapphire Blue */
+  --domain-journal: #EC4899;    /* Vivid Pink / Rose */
+  --domain-projects: #10B981;   /* Vibrant Emerald Green */
+  --domain-knowledge: #A855F7;  /* Royal Purple / Violet */
+  --domain-study: #C084FC;      /* Soft Lavender */
+  --domain-resources: #F97316;  /* Tangerine Orange */
+  --domain-archive: #64748B;    /* Cool Slate Steel Gray */
+  --domain-system: #EF4444;     /* Vivid Ruby Crimson Red */
+  --domain-clippings: #84CC16;  /* Electric Highlighter Lime */
+
+  /* UI Component Tokens */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover-border: rgba(255, 255, 255, 0.18);
+  --card-radius: 8px;
+  --card-padding: 16px;
+}
+
+body.theme-light {
+  --card-bg: rgba(0, 0, 0, 0.02);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover-border: rgba(0, 0, 0, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   1. File Explorer Folder & File Pill Accents (Screenshot-Style)
+   -------------------------------------------------------------------------- */
+
+/* Container width constraint to prevent sidebar expansion / horizontal push */
+.nav-files-container {
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Completely remove shifting / indentation logic for nested folders and child notes */
+.nav-folder-children {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+}
+
+body.theme-light .nav-folder-children {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+}
+
+/* Base folder row styling - fixed flush alignment */
+.nav-files-container .nav-folder-title {
+  --folder-color: #9ca3af;
+  display: flex !important;
+  align-items: center !important;
+  border-left: 3.5px solid var(--folder-color) !important;
+  border-radius: 5px !important;
+  background-color: color-mix(in srgb, var(--folder-color) 13%, transparent) !important;
+  margin: 2px 4px !important;
+  padding: 5px 8px !important;
+  max-width: calc(100% - 8px) !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
+  color: var(--folder-color) !important;
+}
+
+/* Hover and active states */
+.nav-files-container .nav-folder-title:hover {
+  background-color: color-mix(in srgb, var(--folder-color) 24%, transparent) !important;
+}
+
+.nav-files-container .nav-folder-title.is-active {
+  background-color: color-mix(in srgb, var(--folder-color) 30%, transparent) !important;
+}
+
+/* ==========================================================================
+   🧭 Modern Web Accordion Layout: Left Folder Icon + Extreme Right Chevron Arrow
+   ========================================================================== */
+.nav-files-container .nav-folder-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+}
+
+/* 1. Left Section (order: 1): Folder Icon + Title */
+.nav-files-container .nav-folder-title .nav-folder-title-content {
+  order: 1 !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Clean tinted folder icon on the left (Always visible by default) */
+.nav-files-container .nav-folder-title .nav-folder-title-content::before {
+  display: inline-block !important;
+  width: 17px !important;
+  height: 17px !important;
+  margin-right: 8px !important;
+  background-color: currentColor !important;
+  -webkit-mask-size: 17px 17px !important;
+  mask-size: 17px 17px !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-position: center !important;
+  mask-position: center !important;
+  vertical-align: -3px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.15s ease, background-color 0.15s ease !important;
+  content: "" !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020h16a2%202%200%200%200%202-2V8a2%202%200%200%200-2-2h-7.93a2%202%200%200%201-1.66-.9l-.82-1.2A2%202%200%200%200%207.93%203H4a2%202%200%200%200-2%202v13c0%201.1.9%202%202%202Z%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020h16a2%202%200%200%200%202-2V8a2%202%200%200%200-2-2h-7.93a2%202%200%200%201-1.66-.9l-.82-1.2A2%202%200%200%200%207.93%203H4a2%202%200%200%200-2%202v13c0%201.1.9%202%202%202Z%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+}
+
+/* Sub-folder folder icon: reduced size smaller than parent folder icon */
+.nav-files-container .nav-folder-children .nav-folder-title .nav-folder-title-content::before,
+.nav-files-container .nav-folder-title[data-path*="/"] .nav-folder-title-content::before {
+  width: 13.5px !important;
+  height: 13.5px !important;
+  -webkit-mask-size: 13.5px 13.5px !important;
+  mask-size: 13.5px 13.5px !important;
+  margin-right: 6px !important;
+  vertical-align: -2px !important;
+}
+
+/* Closed Folder Icon (Left) with matching 25% tint fill */
+.nav-files-container .nav-folder.is-collapsed > .nav-folder-title .nav-folder-title-content::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020h16a2%202%200%200%200%202-2V8a2%202%200%200%200-2-2h-7.93a2%202%200%200%201-1.66-.9l-.82-1.2A2%202%200%200%200%207.93%203H4a2%202%200%200%200-2%202v13c0%201.1.9%202%202%202Z%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020h16a2%202%200%200%200%202-2V8a2%202%200%200%200-2-2h-7.93a2%202%200%200%201-1.66-.9l-.82-1.2A2%202%200%200%200%207.93%203H4a2%202%200%200%200-2%202v13c0%201.1.9%202%202%202Z%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+}
+
+/* Open/Expanded Folder Icon (Left) with matching 25% tint fill - Always visible when open */
+.nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title .nav-folder-title-content::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%2014%201.5-2.9A2%202%200%200%201%209.24%2010H20a2%202%200%200%201%201.94%202.5l-1.54%206a2%202%200%200%201-1.95%201.5H4a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h3.9a2%202%200%200%201%201.69.9l.81%201.2a2%202%200%200%200%201.67.9H18a2%202%200%200%201%202%202v2%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%2014%201.5-2.9A2%202%200%200%201%209.24%2010H20a2%202%200%200%201%201.94%202.5l-1.54%206a2%202%200%200%201-1.95%201.5H4a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h3.9a2%202%200%200%201%201.69.9l.81%201.2a2%202%200%200%200%201.67.9H18a2%202%200%200%201%202%202v2%22%20fill%3D%22currentColor%22%20fill-opacity%3D%220.25%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22/%3E%3C/svg%3E") !important;
+}
+
+/* 2. Completely remove the collapse chevron arrow */
+.nav-files-container .nav-folder-title .collapse-icon,
+.nav-files-container .nav-folder-title .nav-folder-collapse-indicator {
+  display: none !important;
+}
+
+/* Strict text truncation to prevent content from pushing widths */
+.nav-files-container .nav-folder-title-content,
+.nav-files-container .nav-file-title-content {
+  color: inherit !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.nav-files-container .nav-folder-title .nav-folder-title-content {
+  color: var(--folder-color) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* File items styling - matching parent folder tint and flush alignment */
+/* --------------------------------------------------------------------------
+   Sub-Folders & Child Notes: Thin Tint Left Border with Same Parent Color
+   -------------------------------------------------------------------------- */
+.nav-files-container .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-files-container .nav-folder-title[data-path*="/"],
+.nav-files-container .nav-file-title {
+  display: flex !important;
+  align-items: center !important;
+  border-left: 2px solid color-mix(in srgb, var(--folder-color, #9ca3af) 45%, transparent) !important;
+  border-radius: 4px !important;
+  margin: 2px 4px !important;
+  padding: 5px 8px !important;
+  max-width: calc(100% - 8px) !important;
+  box-sizing: border-box !important;
+  color: var(--folder-color, var(--text-normal)) !important;
+  background-color: color-mix(in srgb, var(--folder-color, #9ca3af) 13%, transparent) !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
+}
+
+body.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-title,
+body.theme-light .nav-files-container .nav-folder-title[data-path*="/"],
+body.theme-light .nav-files-container .nav-file-title {
+  border-left: 2px solid color-mix(in srgb, var(--folder-color, #9ca3af) 45%, transparent) !important;
+  background-color: color-mix(in srgb, var(--folder-color, #9ca3af) 13%, transparent) !important;
+}
+
+.nav-files-container .nav-folder-children .nav-folder-children .nav-folder-title:hover,
+.nav-files-container .nav-folder-title[data-path*="/"]:hover,
+.nav-files-container .nav-file-title:hover {
+  background-color: color-mix(in srgb, var(--folder-color, #9ca3af) 24%, transparent) !important;
+  border-left-color: var(--folder-color, var(--text-normal)) !important;
+  color: var(--folder-color, var(--text-normal)) !important;
+}
+
+body.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-title:hover,
+body.theme-light .nav-files-container .nav-folder-title[data-path*="/"]:hover,
+body.theme-light .nav-files-container .nav-file-title:hover {
+  background-color: color-mix(in srgb, var(--folder-color, #9ca3af) 24%, transparent) !important;
+}
+
+.nav-files-container .nav-folder-children .nav-folder-children .nav-folder-title.is-active,
+.nav-files-container .nav-folder-title[data-path*="/"].is-active,
+.nav-files-container .nav-file-title.is-active {
+  background-color: color-mix(in srgb, var(--folder-color, #9ca3af) 30%, transparent) !important;
+  border-left-color: var(--folder-color, var(--interactive-accent)) !important;
+  color: var(--folder-color, var(--text-normal)) !important;
+}
+
+/* Standalone Root Files */
+.nav-files-container .nav-file-title[data-path="README.md"],
+.nav-files-container .nav-file-title[data-path="origin.base"] {
+  --folder-color: #94a3b8 !important;
+  border-left: 2px solid color-mix(in srgb, #94a3b8 45%, transparent) !important;
+  background-color: color-mix(in srgb, #94a3b8 13%, transparent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Specific Folder Color Assignments (Unique, Distinct Color for Every Folder)
+   -------------------------------------------------------------------------- */
+
+/* 00 Home (Warm Amber Gold) */
+.nav-files-container .nav-folder-title[data-path="Home" i],
+.nav-files-container .nav-folder-title[data-path^="00 Home" i],
+.nav-files-container .nav-folder-title[data-path*="home" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Home" i]),
+.nav-files-container .nav-file-title[data-path="Home" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="00 Home" i]),
+.nav-files-container .nav-file-title[data-path^="00 Home" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="home" i]),
+.nav-files-container .nav-file-title[data-path*="home" i] {
+  --folder-color: #f59e0b !important;
+}
+
+/* 01 Daily Notes (Electric Cyan) */
+.nav-files-container .nav-folder-title[data-path="Daily Notes" i],
+.nav-files-container .nav-folder-title[data-path^="Daily Notes/" i],
+.nav-files-container .nav-folder-title[data-path^="01 Daily Notes" i],
+.nav-files-container .nav-folder-title[data-path*="daily" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Daily Notes" i]),
+.nav-files-container .nav-file-title[data-path="Daily Notes" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Daily Notes/" i]),
+.nav-files-container .nav-file-title[data-path^="Daily Notes/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="01 Daily Notes" i]),
+.nav-files-container .nav-file-title[data-path^="01 Daily Notes" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="daily" i]),
+.nav-files-container .nav-file-title[data-path*="daily" i] {
+  --folder-color: #06b6d4 !important;
+}
+
+/* 02 Work (Royal / Sapphire Blue) */
+.nav-files-container .nav-folder-title[data-path="Work" i],
+.nav-files-container .nav-folder-title[data-path^="02 Work" i],
+.nav-files-container .nav-folder-title[data-path*="work" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Work" i]),
+.nav-files-container .nav-file-title[data-path="Work" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="02 Work" i]),
+.nav-files-container .nav-file-title[data-path^="02 Work" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="work" i]),
+.nav-files-container .nav-file-title[data-path*="work" i] {
+  --folder-color: #2563eb !important;
+}
+
+/* 03 Journal (Vivid Pink / Rose) */
+.nav-files-container .nav-folder-title[data-path="Journal" i],
+.nav-files-container .nav-folder-title[data-path^="Journal/" i],
+.nav-files-container .nav-folder-title[data-path^="03 Journal" i],
+.nav-files-container .nav-folder-title[data-path*="journal" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Journal" i]),
+.nav-files-container .nav-file-title[data-path="Journal" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Journal/" i]),
+.nav-files-container .nav-file-title[data-path^="Journal/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="03 Journal" i]),
+.nav-files-container .nav-file-title[data-path^="03 Journal" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="journal" i]),
+.nav-files-container .nav-file-title[data-path*="journal" i] {
+  --folder-color: #ec4899 !important;
+}
+
+/* 04 Projects & Goals (Vibrant Emerald Green) */
+.nav-files-container .nav-folder-title[data-path="Projects" i],
+.nav-files-container .nav-folder-title[data-path^="Projects/" i],
+.nav-files-container .nav-folder-title[data-path^="04 Projects & Goals" i],
+.nav-files-container .nav-folder-title[data-path*="project" i],
+.nav-files-container .nav-folder-title[data-path*="goal" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Projects" i]),
+.nav-files-container .nav-file-title[data-path="Projects" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Projects/" i]),
+.nav-files-container .nav-file-title[data-path^="Projects/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="04 Projects & Goals" i]),
+.nav-files-container .nav-file-title[data-path^="04 Projects & Goals" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="project" i]),
+.nav-files-container .nav-file-title[data-path*="project" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="goal" i]),
+.nav-files-container .nav-file-title[data-path*="goal" i] {
+  --folder-color: #10b981 !important;
+}
+
+/* 05 Knowledge (Royal Purple / Violet) */
+.nav-files-container .nav-folder-title[data-path="Knowledge" i],
+.nav-files-container .nav-folder-title[data-path^="Knowledge/" i],
+.nav-files-container .nav-folder-title[data-path^="05 Knowledge" i],
+.nav-files-container .nav-folder-title[data-path*="knowledge" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Knowledge" i]),
+.nav-files-container .nav-file-title[data-path="Knowledge" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Knowledge/" i]),
+.nav-files-container .nav-file-title[data-path^="Knowledge/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="05 Knowledge" i]),
+.nav-files-container .nav-file-title[data-path^="05 Knowledge" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="knowledge" i]),
+.nav-files-container .nav-file-title[data-path*="knowledge" i] {
+  --folder-color: #a855f7 !important;
+}
+
+/* 05 Knowledge Subfolder: Study (Soft Lavender) */
+.nav-files-container .nav-folder-title[data-path="Study" i],
+.nav-files-container .nav-folder-title[data-path^="05 Knowledge/Study" i],
+.nav-files-container .nav-folder-title[data-path*="study" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Study" i]),
+.nav-files-container .nav-file-title[data-path="Study" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="05 Knowledge/Study" i]),
+.nav-files-container .nav-file-title[data-path^="05 Knowledge/Study" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="study" i]),
+.nav-files-container .nav-file-title[data-path*="study" i] {
+  --folder-color: #c084fc !important;
+}
+
+/* 06 Resources (Tangerine Orange) */
+.nav-files-container .nav-folder-title[data-path="Resources" i],
+.nav-files-container .nav-folder-title[data-path^="Resources/" i],
+.nav-files-container .nav-folder-title[data-path^="06 Resources" i],
+.nav-files-container .nav-folder-title[data-path*="resource" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Resources" i]),
+.nav-files-container .nav-file-title[data-path="Resources" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Resources/" i]),
+.nav-files-container .nav-file-title[data-path^="Resources/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="06 Resources" i]),
+.nav-files-container .nav-file-title[data-path^="06 Resources" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="resource" i]),
+.nav-files-container .nav-file-title[data-path*="resource" i] {
+  --folder-color: #f97316 !important;
+}
+
+/* 07 Archive (Cool Slate Steel Gray) */
+.nav-files-container .nav-folder-title[data-path="Archive" i],
+.nav-files-container .nav-folder-title[data-path^="07 Archive" i],
+.nav-files-container .nav-folder-title[data-path*="archive" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Archive" i]),
+.nav-files-container .nav-file-title[data-path="Archive" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="07 Archive" i]),
+.nav-files-container .nav-file-title[data-path^="07 Archive" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="archive" i]),
+.nav-files-container .nav-file-title[data-path*="archive" i] {
+  --folder-color: #64748b !important;
+}
+
+/* 99 System (Vivid Ruby / Crimson Red) */
+.nav-files-container .nav-folder-title[data-path="System" i],
+.nav-files-container .nav-folder-title[data-path^="99 System" i],
+.nav-files-container .nav-folder-title[data-path*="system" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="System" i]),
+.nav-files-container .nav-file-title[data-path="System" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="99 System" i]),
+.nav-files-container .nav-file-title[data-path^="99 System" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="system" i]),
+.nav-files-container .nav-file-title[data-path*="system" i] {
+  --folder-color: #ef4444 !important;
+}
+
+/* Clippings (Highlighter Lime Green) */
+.nav-files-container .nav-folder-title[data-path="Clippings" i],
+.nav-files-container .nav-folder-title[data-path^="Clippings/" i],
+.nav-files-container .nav-folder-title[data-path*="clipping" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path="Clippings" i]),
+.nav-files-container .nav-file-title[data-path="Clippings" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path^="Clippings/" i]),
+.nav-files-container .nav-file-title[data-path^="Clippings/" i],
+.nav-files-container .nav-folder:has(> .nav-folder-title[data-path*="clipping" i]),
+.nav-files-container .nav-file-title[data-path*="clipping" i] {
+  --folder-color: #84cc16 !important;
+}
+
+/* Supplemental Topic Folders */
+.nav-files-container .nav-folder-title[data-path*="atomic" i],
+.nav-files-container .nav-file-title[data-path*="atomic" i] {
+  --folder-color: #eab308 !important;
+}
+.nav-files-container .nav-folder-title[data-path*="debug" i],
+.nav-files-container .nav-folder-title[data-path*="troubleshoot" i] {
+  --folder-color: #f43f5e !important;
+}
+
+/* --------------------------------------------------------------------------
+   Sequential Rainbow Fallback (Exact match to sidebar folder order)
+   -------------------------------------------------------------------------- */
+.nav-files-container > div > .nav-folder:nth-child(10n + 1) > .nav-folder-title { --folder-color: #f59e0b; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 2) > .nav-folder-title { --folder-color: #06b6d4; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 3) > .nav-folder-title { --folder-color: #2563eb; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 4) > .nav-folder-title { --folder-color: #ec4899; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 5) > .nav-folder-title { --folder-color: #10b981; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 6) > .nav-folder-title { --folder-color: #a855f7; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 7) > .nav-folder-title { --folder-color: #f97316; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 8) > .nav-folder-title { --folder-color: #64748b; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 9) > .nav-folder-title { --folder-color: #ef4444; }
+.nav-files-container > div > .nav-folder:nth-child(10n + 10) > .nav-folder-title { --folder-color: #84cc16; }
+
+/* --------------------------------------------------------------------------
+   2. Custom Callouts for Each Domain (Synced to folder colors)
+   -------------------------------------------------------------------------- */
+.callout[data-callout="home"] { --callout-color: 245, 158, 11; --callout-icon: lucide-home; }
+.callout[data-callout="inbox"] { --callout-color: 234, 179, 8; --callout-icon: lucide-inbox; }
+.callout[data-callout="daily"] { --callout-color: 6, 182, 212; --callout-icon: lucide-calendar; }
+.callout[data-callout="work"] { --callout-color: 37, 99, 235; --callout-icon: lucide-briefcase; }
+.callout[data-callout="personal"] { --callout-color: 20, 184, 166; --callout-icon: lucide-user; }
+.callout[data-callout="study"] { --callout-color: 192, 132, 252; --callout-icon: lucide-graduation-cap; }
+.callout[data-callout="journal"] { --callout-color: 236, 72, 153; --callout-icon: lucide-book-heart; }
+.callout[data-callout="project"] { --callout-color: 16, 185, 129; --callout-icon: lucide-target; }
+.callout[data-callout="knowledge"] { --callout-color: 168, 85, 247; --callout-icon: lucide-brain; }
+.callout[data-callout="resource"] { --callout-color: 249, 115, 22; --callout-icon: lucide-library; }
+.callout[data-callout="archive"] { --callout-color: 100, 116, 139; --callout-icon: lucide-archive; }
+.callout[data-callout="system"] { --callout-color: 239, 68, 68; --callout-icon: lucide-cog; }
+.callout[data-callout="clippings"] { --callout-color: 132, 204, 22; --callout-icon: lucide-scissors; }
+
+/* --------------------------------------------------------------------------
+   3. Dashboard Card Grid System
+   -------------------------------------------------------------------------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.dashboard-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.dashboard-card:hover {
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.dashboard-card li {
+  margin-bottom: 4px;
+}
+
+/* Card Accent Borders */
+.dashboard-card.card-home { border-top: 3px solid var(--domain-home); }
+.dashboard-card.card-inbox { border-top: 3px solid var(--domain-inbox); }
+.dashboard-card.card-daily { border-top: 3px solid var(--domain-daily); }
+.dashboard-card.card-work { border-top: 3px solid var(--domain-work); }
+.dashboard-card.card-personal { border-top: 3px solid var(--domain-personal); }
+.dashboard-card.card-study { border-top: 3px solid var(--domain-study); }
+.dashboard-card.card-journal { border-top: 3px solid var(--domain-journal); }
+.dashboard-card.card-projects { border-top: 3px solid var(--domain-projects); }
+.dashboard-card.card-knowledge { border-top: 3px solid var(--domain-knowledge); }
+.dashboard-card.card-resources { border-top: 3px solid var(--domain-resources); }
+.dashboard-card.card-archive { border-top: 3px solid var(--domain-archive); }
+.dashboard-card.card-system { border-top: 3px solid var(--domain-system); }
+.dashboard-card.card-clippings { border-top: 3px solid var(--domain-clippings); }
+
+/* --------------------------------------------------------------------------
+   4. Status Badges & Pills
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-active { background: rgba(245, 158, 11, 0.15); color: var(--domain-projects); border: 1px solid rgba(245, 158, 11, 0.3); }
+.badge-evergreen { background: rgba(139, 124, 255, 0.15); color: var(--domain-knowledge); border: 1px solid rgba(139, 124, 255, 0.3); }
+.badge-completed { background: rgba(114, 196, 114, 0.15); color: var(--domain-resources); border: 1px solid rgba(114, 196, 114, 0.3); }
+.badge-inbox { background: rgba(255, 127, 110, 0.15); color: var(--domain-inbox); border: 1px solid rgba(255, 127, 110, 0.3); }
