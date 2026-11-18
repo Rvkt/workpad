@@ -22,15 +22,18 @@ Devbook/
 ├── Aliases/
 ├── Clippings/
 ├── References/
-│   ├── Roadmaps/        (per-technology learning tracks, e.g. Roadmaps/Python)
 │   ├── Decisions/       (ADRs)
 │   ├── Personal/        (legacy exception — see §10)
 │   └── MOCs/            (per-folder Dataview index notes)
+├── Roadmaps/            (per-technology learning tracks, e.g. Roadmaps/Python)
+│   └── Roadmaps MOC.md  (Dataview index over the #roadmap tag)
 ├── README.md
 └── .gitignore
 ```
 
-New top-level directories still require explicit approval. Subfolders under `References/` as shown above are permitted; avoid adding further `References/` subfolders without approval.
+New top-level directories still require explicit approval; `Roadmaps/` is approved. Subfolders under `References/` as shown above are permitted; avoid adding further subfolders under `References/` or `Roadmaps/` without approval.
+
+Every note under `Roadmaps/<Track>/` must carry `tags: [roadmap, roadmap/<track-slug>]` in its frontmatter (track slug lowercase, hyphenated, e.g. `roadmap/react-native`) so it is discoverable via the `#roadmap` tag and grouped correctly by `Roadmaps/Roadmaps MOC.md`.
 
 ## 3. Content Categories
 
