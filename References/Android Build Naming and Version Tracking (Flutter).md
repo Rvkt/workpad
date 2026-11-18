@@ -8,7 +8,6 @@ tags:
   - android
   - gradle
 ---
-
 # Android build naming & version tracking (for later use in other Flutter apps)
 
 This describes the setup used in `android/app/build.gradle.kts` (Patient App) so it
