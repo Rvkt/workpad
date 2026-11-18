@@ -1,6 +1,8 @@
 ---
-tags: [moc, reference]
+type: moc
+domain: reference
 created: 2026-11-17
+tags: [moc, reference]
 ---
 
 ## Overview

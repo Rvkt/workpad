@@ -1,6 +1,8 @@
 ---
-tags: [moc, troubleshooting]
+type: moc
+domain: troubleshooting
 created: 2026-11-17
+tags: [moc, troubleshooting]
 ---
 
 ## Overview

@@ -1,6 +1,8 @@
 ---
-tags: [moc, command]
+type: moc
+domain: command
 created: 2026-11-17
+tags: [moc, command]
 ---
 
 ## Overview

@@ -1,6 +1,8 @@
 ---
-tags: [moc, alias]
+type: moc
+domain: alias
 created: 2026-11-17
+tags: [moc, alias]
 ---
 
 ## Overview

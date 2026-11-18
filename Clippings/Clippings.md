@@ -1,5 +1,6 @@
 ---
 type: moc
+domain: clippings
 title: "Web Clippings Hub"
 created: 2026-10-22
 tags:
@@ -37,7 +38,7 @@ tags:
 
 ```dataview
 TABLE source AS "Source URL", author AS "Author", created AS "Clipped Date"
-FROM #clippings OR "Clippings" OR "06 Resources/Articles"
+FROM #clippings OR "Clippings"
 WHERE file.name != "Clippings"
 SORT created DESC
 ```

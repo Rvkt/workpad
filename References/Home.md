@@ -8,7 +8,7 @@ tags:
 
 > [!home] Daily Compass
 > **Engineering Command Center** · **Current Focus:** Flutter & Django Production Architecture
-> Quick Actions: [[Daily Note 2026-10-21|📅 Today's Daily Note]] · [[Surfari Mobile Client|🚀 Active Project]] · [[Work MOC|💼 Work MOC]] · [[Clippings Index|📑 Web Clippings]]
+> Quick Actions: [[Daily Note 2026-10-21|📅 Today's Daily Note]] · [[Surfari Mobile Client|🚀 Active Project]] · [[Work MOC|💼 Work MOC]] · [[Clippings|📑 Web Clippings]]
 
 ---
 
