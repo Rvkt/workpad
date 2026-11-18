@@ -10,6 +10,6 @@ tags:
 hub: "[[Clippings]]"
 ---
 
-> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[06 Resources/Articles/onshore offshore, cross, explain these. related to surfing|Onshore vs Offshore Wind in Surfing]] · **Project:** [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]]
+> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[onshore offshore, cross, explain these. related to surfing|Onshore vs Offshore Wind in Surfing]] · **Project:** [[Surfari Mobile Client|Surfari Mobile Client]]
 
 end

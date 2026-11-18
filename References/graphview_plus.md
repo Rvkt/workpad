@@ -145,6 +145,6 @@ controller.refresh();
 
 ## 🔗 Cross-Domain Connected Notes
 
-- **Target Project:** [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]] *(Candidate for interactive wave network & telemetry dependency visualizer)*
-- **Engineering Learning:** [[05 Knowledge/Maps of Content/Study MOC|Study MOC]] *(Dart/Flutter canvas graphics & state architecture)*
-- **Knowledge Representation:** [[05 Knowledge/Maps of Content/Knowledge MOC|Knowledge MOC]]
+- **Target Project:** [[Surfari Mobile Client|Surfari Mobile Client]] *(Candidate for interactive wave network & telemetry dependency visualizer)*
+- **Engineering Learning:** [[Study MOC|Study MOC]] *(Dart/Flutter canvas graphics & state architecture)*
+- **Knowledge Representation:** [[Knowledge MOC|Knowledge MOC]]

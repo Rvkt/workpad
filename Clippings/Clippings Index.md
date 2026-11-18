@@ -11,7 +11,7 @@ tags:
 
 > [!info] Graph Nexus · Web Clippings
 > **Central Knowledge Bridge** connecting web articles, documentation clips, and browser captures into the second brain graph.
-> **Navigation:** [[00 Home/Home|🏠 Home Dashboard]] · [[05 Knowledge/Maps of Content/Knowledge MOC|🧠 Knowledge MOC]] · [[06 Resources/References/graphview_plus|📦 graphview_plus]]
+> **Navigation:** [[Home|🏠 Home Dashboard]] · [[Knowledge MOC|🧠 Knowledge MOC]] · [[graphview_plus|📦 graphview_plus]]
 
 ---
 
@@ -20,16 +20,16 @@ tags:
 ### ⚡ React Native & Mobile Performance
 - [[Optimizing React Native Performance A Developer's Guide]] — Production optimization techniques, memoization boundaries, and custom hook overhead.
 - [[Performance Overview · React Native]] — JS thread vs UI main thread frame rates, 60 FPS target, and bridge batching.
-- [[06 Resources/Articles/react-native-toast-message|react-native-toast-message]] — Lightweight imperative toast message component for mobile apps.
-- *Connected Project:* [[04 Projects & Goals/Projects/DroidLens|DroidLens]] · [[05 Knowledge/Study/Flutter & Dart|Mobile Engineering]]
+- [[react-native-toast-message|react-native-toast-message]] — Lightweight imperative toast message component for mobile apps.
+- *Connected Project:* [[DroidLens|DroidLens]] · [[Phase 1 - Dart and Flutter Foundations|Mobile Engineering]]
 
 ### 🌊 Oceanography, Wind & Weather
-- [[06 Resources/Articles/Weather|Weather (Storm Glass API)]] — Programmatic global weather coordinate data endpoint.
-- [[06 Resources/Articles/onshore offshore, cross, explain these. related to surfing|Onshore vs Offshore Wind in Surfing]] — Wind mechanics, surf conditions, wave steepness, and swell impact.
-- *Connected Project:* [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]]
+- [[Weather|Weather (Storm Glass API)]] — Programmatic global weather coordinate data endpoint.
+- [[onshore offshore, cross, explain these. related to surfing|Onshore vs Offshore Wind in Surfing]] — Wind mechanics, surf conditions, wave steepness, and swell impact.
+- *Connected Project:* [[Surfari Mobile Client|Surfari Mobile Client]]
 
 ### 🎨 UI/UX, Design & Accessibility
-- [[06 Resources/Articles/Web Accessibility Color Contrast Checker - Meet WCAG Conformance|Web Accessibility Color Contrast Checker]] — WCAG A, AA, and AAA conformance scanning and ratio validation.
+- [[Web Accessibility Color Contrast Checker - Meet WCAG Conformance|Web Accessibility Color Contrast Checker]] — WCAG A, AA, and AAA conformance scanning and ratio validation.
 
 ---
 

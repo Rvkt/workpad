@@ -15,9 +15,9 @@ tags:
 ---
 
 ## 🧭 Project Architecture
-- **Active Projects** — [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]] · [[04 Projects & Goals/Projects/DroidLens|DroidLens]]
+- **Active Projects** — [[Surfari Mobile Client|Surfari Mobile Client]] · [[DroidLens|DroidLens]]
 - **Goals & OKRs** — Q4 Engineering Milestones & Scalable REST Backend
 - **Reviews & Retrospectives** — Project post-mortems and quarterly cadence reviews
 
 ---
-**Vault Navigation:** [[00 Home/Home|Home Dashboard]] · [[05 Knowledge/Maps of Content/Work MOC|Work MOC]]
+**Vault Navigation:** [[Home|Home Dashboard]] · [[Work MOC|Work MOC]]

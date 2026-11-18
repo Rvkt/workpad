@@ -424,6 +424,6 @@ This mental model will be reused throughout the remaining modules.
 ---
 
 ## 🔗 Connected Notes
-- **Maps of Content:** [[05 Knowledge/Maps of Content/Knowledge MOC|Knowledge MOC]] · [[05 Knowledge/Maps of Content/Study MOC|Study MOC]]
-- **Related Concept:** [[05 Knowledge/Concepts/Optimistic UI Updates in Flutter|Optimistic UI Updates in Flutter]]
-- **Related Clipping:** [[Clippings/8 API Laws of Senior Backend Developer|8 API Laws of Senior Backend Developer]]
+- **Maps of Content:** [[Knowledge MOC|Knowledge MOC]] · [[Study MOC|Study MOC]]
+- **Related Concept:** [[Optimistic UI Updates in Flutter|Optimistic UI Updates in Flutter]]
+- **Related Clipping:** [[8 API Laws of Senior Backend Developer|8 API Laws of Senior Backend Developer]]

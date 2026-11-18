@@ -10,7 +10,7 @@ tags:
 hub: "[[Clippings]]"
 ---
 
-> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[Optimizing React Native Performance A Developer's Guide]], [[Performance Overview · React Native]] · **Topic:** [[04 Projects & Goals/Projects/DroidLens|DroidLens]]
+> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[Optimizing React Native Performance A Developer's Guide]], [[Performance Overview · React Native]] · **Topic:** [[DroidLens|DroidLens]]
 
 Animated toast message component for React Native.
 

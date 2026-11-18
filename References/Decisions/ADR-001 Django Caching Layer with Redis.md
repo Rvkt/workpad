@@ -2,7 +2,7 @@
 type: decision
 status: accepted
 created: 2026-10-21
-project: "[[04 Projects & Goals/Projects/Surfari Mobile Client]]"
+project: "[[Surfari Mobile Client]]"
 tags:
   - decision
   - adr
@@ -34,6 +34,6 @@ The mobile client makes heavy polling requests for live wave data and forecast m
 **Justification:** Eliminates 90% of repeat DB queries, supporting thousands of concurrent Flutter clients with sub-50ms API response times.
 
 ## 🔗 Related Notes
-- Project: [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]]
-- Concept: [[05 Knowledge/Concepts/Optimistic UI Updates in Flutter|Optimistic UI Updates]]
-- Work MOC: [[05 Knowledge/Maps of Content/Work MOC|Work MOC]]
+- Project: [[Surfari Mobile Client|Surfari Mobile Client]]
+- Concept: [[Optimistic UI Updates in Flutter|Optimistic UI Updates]]
+- Work MOC: [[Work MOC|Work MOC]]

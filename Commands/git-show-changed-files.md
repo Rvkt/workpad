@@ -127,5 +127,5 @@ git show --stat <commit-hash>
 
 ## Related
 
-- [[05 Knowledge/Maps of Content/Work MOC|Work MOC]]
-- [[00 Home/Home|Home Dashboard]]
+- [[Work MOC|Work MOC]]
+- [[Home|Home Dashboard]]

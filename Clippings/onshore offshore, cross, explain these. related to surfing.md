@@ -10,7 +10,7 @@ tags:
 hub: "[[Clippings]]"
 ---
 
-> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[06 Resources/Articles/Weather|Weather (Storm Glass API)]] · **Project:** [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]]
+> [!info] 🔗 **Clipping Hub:** [[Clippings]] · **Related:** [[Weather|Weather (Storm Glass API)]] · **Project:** [[Surfari Mobile Client|Surfari Mobile Client]]
 
 ## Web results
 

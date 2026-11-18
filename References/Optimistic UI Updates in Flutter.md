@@ -39,6 +39,6 @@ tags:
 - **Constraints:** Requires deterministic rollback logic and idempotent REST API endpoints.
 
 ## 🔗 Connected Notes
-- Applied In Project: [[04 Projects & Goals/Projects/Surfari Mobile Client|Surfari Mobile Client]]
-- Architecture Decision: [[02 Work/Decisions/ADR-001 Django Caching Layer with Redis|ADR-001 Django Caching Layer with Redis]]
-- Map of Content: [[05 Knowledge/Maps of Content/Knowledge MOC|Knowledge MOC]]
+- Applied In Project: [[Surfari Mobile Client|Surfari Mobile Client]]
+- Architecture Decision: [[ADR-001 Django Caching Layer with Redis|ADR-001 Django Caching Layer with Redis]]
+- Map of Content: [[Knowledge MOC|Knowledge MOC]]
