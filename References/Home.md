@@ -95,4 +95,4 @@ WHERE file.name != "Home" AND !contains(file.folder, "99 System")
 SORT file.mtime desc
 LIMIT 8
 ```
-*(If Dataview is not installed, access your recent notes via Quick Switcher `Ctrl/Cmd + O` or the Bases dashboard in [[origin.base]])*
+*(If Dataview is not installed, access your recent notes via Quick Switcher `Ctrl/Cmd + O`.)*
